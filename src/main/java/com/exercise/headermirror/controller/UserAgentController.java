@@ -18,7 +18,7 @@ public class UserAgentController {
     @PostMapping
     public ResponseEntity<?> captureUserAgent(@RequestHeader("User-Agent") String userAgent) {
         userAgentService.saveOrUpdateUserAgent(userAgent);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok("User-Agent captured successfully");
     }
 
     @GetMapping
